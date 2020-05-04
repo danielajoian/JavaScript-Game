@@ -6,9 +6,15 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-if __name__ == '__main__':
+
+@app.route('/game', methods=['GET', 'POST'])
+def game():
+    return render_template('game.html')
+
+
+if __name__=='__main__':
     app.run(
-        debug = True,
-        host = 'localhost',
-        port = 5300
+        debug=True,
+        host='localhost',
+        port=5300
     )
