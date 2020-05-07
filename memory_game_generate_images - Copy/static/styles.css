@@ -1,0 +1,116 @@
+/* importing a font-family */
+@font-face {
+    font-family: "Creepy";
+    src: url("../Assets/Fonts/Creepy.woff") format("woff"),
+    url("../Assets/Fonts/Creepy.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Lunacy";
+    src: url("../Assets/Fonts/Lunacy.woff") format("woff"),
+    url("../Assets/Fonts/Lunacy.woff2") format("woff2")
+}
+
+* {
+    box-sizing: border-box;  /* so that the elements keep their size no matther the size of the border or padding */
+}
+
+html {
+    min-height: 100vh;  /* the page streches at least all the height of the window */
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(rgb(157, 0, 73), rgb(61, 0, 56));  /* the color of the background changes radial from center to the edges; first color is the one in the center; */
+}
+
+.page-title {
+    color: rgb(240, 14, 63);
+    font-family: Creepy, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 5em;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;   /* to span from the first column to the last */
+    display: flex;    /* the text is placed side by side */
+    justify-content: space-evenly;   /* creates space between the text */
+}
+
+.game-dif {
+    grid-column: 1 / -1;   /* to span from the first column to the last */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-info-dif {
+    color: rgb(238, 57, 96);
+    font-family: Lunacy, serif;
+    font-size: 1.5em;
+}
+
+.game-info {
+    color: rgb(238, 57, 96);
+    font-family: Lunacy, serif;
+    font-size: 4em;
+}
+
+/*
+body {
+    height: 100vh;   /* vh - viewport height; vw - viewport widht; 
+    background: rgba(2, 22, 196, 0.5);  /*
+    background-image: url("defocused-image-of-lights.jpg");
+    background-position: center;
+    background-size: 100%;
+}
+*/
+
+#gameContainer {
+    display: grid;                  /* to create a grid-like view */
+    grid-template-columns: repeat(auto);   /* for the columns in the grid; 4 columns that stretch to fill all the grid */
+    grid-gap: 10px;   /* for the gap between the columns */
+    margin: 50px;
+    justify-content: center;
+}
+
+i.fab {
+    position: relative;
+    background-color: rgb(230, 27, 213);
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 4.5em;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid darkblue;
+    border-radius: 2px;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+i.fab:hover {
+    transform: scale(1);
+}
+
+i.fab::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(226, 150, 181);
+    /* background-image: url("ember.png"); */
+    /* background-image: url("../Assets/Images/Pumpkin.png"); */
+    background-image: url("../static/Ghost.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.reveal::after,
+.matched::after {
+    content: none !important;  /* so it overwrites */
+}
