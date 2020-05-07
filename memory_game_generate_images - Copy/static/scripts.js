@@ -7,9 +7,21 @@ const brands = ["bootstrap", "buromobelexperte", "buy-n-large", "buysellads", "c
     "git", "github", "google-drive", "gripfire", "hackerrank",
     "html5", "internet-explorer", "itunes-note", "java", "js",
     "linkedin", "linux", "meetup", "mixcloud", "napster",
-    "node", "node-js", "phoenix-framework", "php", "pinterest"]; 
+    "node", "node-js", "phoenix-framework", "php", "pinterest"
+];
 
 const allowed = [2, 4, 6, 8, 10];
+
+function ready() {
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('visible');
+            // game.startGame();
+        });
+    });
+}
 
 function startGame() {
     let gameContainer = document.getElementById('gameContainer');
@@ -17,12 +29,12 @@ function startGame() {
     let difficulty = parseInt(document.getElementById('difficulty').value);
 
     if (allowed.indexOf(difficulty) !== -1) {
-        let brandsCopy = JSON.parse(JSON.stringify(brands));  // to create a copy of the brands array
+        let brandsCopy = JSON.parse(JSON.stringify(brands)); // to create a copy of the brands array
         let pickedBrands = [];
-        for (let i = (difficulty * difficulty) /2; i>0; i--) {
-            let randomBrand = brandsCopy.splice(Math.floor(Math.random() * brandsCopy.length), 1);   // when we use SPLICE, the element picked is removed from the array
+        for (let i = (difficulty * difficulty) / 2; i > 0; i--) {
+            let randomBrand = brandsCopy.splice(Math.floor(Math.random() * brandsCopy.length), 1); // when we use SPLICE, the element picked is removed from the array
             pickedBrands.push(randomBrand);
-            pickedBrands.push(randomBrand); 
+            pickedBrands.push(randomBrand);
         }
 
         // creating rows and columns for the game board
@@ -48,8 +60,12 @@ function startGame() {
                 });
             }
             gameContainer.append(row);
-        }          
+        }
     } else {
         alert('Invalid value found on difficulty!');
     }
-};
+};if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready());
+} else {
+    ready();
+}
