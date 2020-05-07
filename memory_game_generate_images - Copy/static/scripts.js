@@ -12,6 +12,21 @@ const brands = ["bootstrap", "buromobelexperte", "buy-n-large", "buysellads", "c
 
 const allowed = [2, 4, 6, 8, 10];
 
+class AudioController {
+    constructor() {
+        this.bgMusic = new Audio('../static/Audio/creepy.mp3');
+        this.flipSound = new Audio('../static/Audio/flip.wav');
+        this.matchSound = new Audio('../static/Audio/match.wav');
+        this.victorySound = new Audio('../static/Audio/victory.wav');
+        this.gameOverSound = new Audio('../static/Audio/gameOver.wav');
+        this.bgMusic.volume = 0.5;
+        this.bgMusic.loop = true;
+    }
+    startMusic() {
+        this.bgMusic.play();
+    }
+}
+
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
 
@@ -19,6 +34,8 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
             // game.startGame();
+            let audioController = new AudioController();
+            audioController.startMusic();
         });
     });
 }
@@ -64,7 +81,9 @@ function startGame() {
     } else {
         alert('Invalid value found on difficulty!');
     }
-};if (document.readyState === 'loading') {
+}
+
+if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();

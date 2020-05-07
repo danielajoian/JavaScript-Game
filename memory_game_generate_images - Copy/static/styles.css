@@ -1,28 +1,30 @@
 /* importing a font-family */
+
 @font-face {
     font-family: "Creepy";
-    src: url("Fonts/Creepy.woff") format("woff"),
-    url("Fonts/Creepy.woff2") format("woff2")
+    src: url("Fonts/Creepy.woff") format("woff"), url("Fonts/Creepy.woff2") format("woff2")
 }
 
 @font-face {
     font-family: "Lunacy";
-    src: url("Fonts/Lunacy.woff") format("woff"),
-    url("Fonts/Lunacy.woff2") format("woff2")
+    src: url("Fonts/Lunacy.woff") format("woff"), url("Fonts/Lunacy.woff2") format("woff2")
 }
 
 * {
-    box-sizing: border-box;  /* so that the elements keep their size no matther the size of the border or padding */
+    box-sizing: border-box;
+    /* so that the elements keep their size no matther the size of the border or padding */
 }
 
 html {
-    min-height: 100vh;  /* the page streches at least all the height of the window */
+    min-height: 100vh;
+    /* the page streches at least all the height of the window */
     cursor: url("../static/Cursors/Ghost.cur"), auto;
 }
 
 body {
     margin: 0;
-    background: radial-gradient(rgb(157, 0, 73), rgb(61, 0, 56));  /* the color of the background changes radial from center to the edges; first color is the one in the center; */
+    background: radial-gradient(rgb(157, 0, 73), rgb(61, 0, 56));
+    /* the color of the background changes radial from center to the edges; first color is the one in the center; */
 }
 
 .page-title {
@@ -34,14 +36,18 @@ body {
 }
 
 .game-info-container {
-    grid-column: 1 / -1;   /* to span from the first column to the last */
-    display: flex;    /* the text is placed side by side */
-    justify-content: space-evenly;   /* creates space between the text */
+    grid-column: 1 / -1;
+    /* to span from the first column to the last */
+    display: flex;
+    /* the text is placed side by side */
+    justify-content: space-evenly;
+    /* creates space between the text */
     cursor: pointer;
 }
 
 .game-dif {
-    grid-column: 1 / -1;   /* to span from the first column to the last */
+    grid-column: 1 / -1;
+    /* to span from the first column to the last */
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
@@ -49,7 +55,8 @@ body {
 
 .game-info-dif {
     color: rgb(238, 57, 96);
-    font-family: Lunacy, serif;
+    font-family: Arial, Helvetica, sans-serif, serif;
+    font-weight: bolder;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -59,6 +66,7 @@ body {
     font-family: Lunacy, serif;
     font-size: 4em;
 }
+
 
 /*
 body {
@@ -71,9 +79,12 @@ body {
 */
 
 #gameContainer {
-    display: grid;                  /* to create a grid-like view */
-    grid-template-columns: repeat(auto);   /* for the columns in the grid; 4 columns that stretch to fill all the grid */
-    grid-gap: 10px;   /* for the gap between the columns */
+    display: grid;
+    /* to create a grid-like view */
+    grid-template-columns: repeat(auto);
+    /* for the columns in the grid; 4 columns that stretch to fill all the grid */
+    grid-gap: 10px;
+    /* for the gap between the columns */
     margin: 50px;
     justify-content: center;
     perspective: 500px;
@@ -116,11 +127,13 @@ i.fab::after {
 }
 
 #gameContainer:hover i.fab::after {
-    animation: dance 2s linear infinite 1000ms;  /* for the animation on the back of the card */
+    animation: dance 2s linear infinite 1000ms;
+    /* for the animation on the back of the card */
 }
 
 @keyframes dance {
-    0%, 100% {
+    0%,
+    100% {
         transform: rotate(0);
     }
     25% {
@@ -133,19 +146,21 @@ i.fab::after {
 
 .reveal::after,
 .matched::after {
-    content: none !important;  /* so it overwrites */
+    content: none !important;
+    /* so it overwrites */
 }
 
 .overlay-text {
     display: none;
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     right: 0;
     bottom: 0;
     justify-content: center;
     align-items: center;
-    z-index: 100;   /* so that the text is in front of everything */
+    z-index: 100;
+    /* so that the text is in front of everything */
     color: rgb(240, 14, 63);
     font-family: Creepy, serif;
     flex-direction: column;
@@ -170,4 +185,42 @@ i.fab::after {
         background-color: rgba(0, 0, 0, 0.8);
         font-size: 10em;
     }
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(10, 3, 3);
+    background-color: #101b7a;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px 5px 4px rgb(233, 142, 213);
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: #101b7a;
+}
+
+button:active {
+    background-color: #101b7a;
+    box-shadow: 0 5px rgb(233, 142, 213);
+    transform: translateY(4px);
+}
+
+input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid rgb(157, 0, 73);
+    border-radius: 4px;
+    background-color: #79a8cf;
 }
