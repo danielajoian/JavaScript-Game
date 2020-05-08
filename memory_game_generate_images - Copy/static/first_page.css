@@ -6,7 +6,7 @@ body {
     color: yellow;
     font-family: "Hiragino Maru Gothic ProN";
     font-size: 3em;
-    padding: 280px 420px 0px 420px;
+    padding: 165px 420px 0px 420px;
 }
 
 #button-container {
@@ -27,15 +27,40 @@ a, a:link, a:visited, a:hover, a:active {
     font-family: Open Sans;
     font-size: 25px;
     font-weight: 100;
-    margin: 50px 320px 20px 180px;
+    margin: 0px 320px 2px 35px;
     padding: 15px 30px 15px 30px;
     border: solid #337FED 1px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     text-align: center;
+    float: right;
 }
 
 #play-button:hover {
     background-color:mediumblue;
+}
+
+#standard {
+    color: cornflowerblue;
+    font-family: "Hiragino Maru Gothic ProN";
+    font-size: 30px;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin: 20px 15px 15px 10px;
+}
+
+#customised {
+    color: hotpink;
+    font-family: "Hiragino Maru Gothic ProN";
+    font-size: 30px;
+}
+
+.customisedg {
+ float:left;
+}
+
+.standardg {
+float: right;
 }
