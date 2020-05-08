@@ -4,12 +4,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def first_page():
-    return render_template("index.html")
+    return render_template("first_page.html")
+
+
+@app.route('/play')
+def play():
+    return render_template("standard.html")
 
 
 if __name__ == "__main__":
     app.run(
-        debug = True,
-        host = "localhost",
-        port = 5500
+        debug=True,
+        host="localhost",
+        port=5000
     )
