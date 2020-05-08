@@ -59,6 +59,7 @@ body {
     font-weight: bolder;
     font-size: 1.5em;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .game-info {

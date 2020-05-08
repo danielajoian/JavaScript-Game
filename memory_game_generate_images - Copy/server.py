@@ -11,6 +11,10 @@ def first_page():
 def play():
     return render_template("standard.html")
 
+@app.route('/customised')
+def customised():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(

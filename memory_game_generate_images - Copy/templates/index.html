@@ -10,36 +10,16 @@
     <script src="https://kit.fontawesome.com/49a3922351.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <h1 class="page-title">Flip-And-Match</h1>
-    <div class="overlay-text visible">
-        Click to start
-    </div>
-    <div id="game-over-text"  class="overlay-text">
-        GAME OVER!
-        <span class="overlay-text-small">Click to Restart</span>
-    </div>
-    <div id="victory-text"  class="overlay-text">
-        VICTORY!
-        <span class="overlay-text-small">Click to Restart</span>
-    </div>
+
     <div class="game-container">
         <div class="game-dif">
             <label class="game-info-dif" for="difficulty">Game Difficulty</label>
-            <label class="game-info-dif" for="startGame">(Allowed values: 2, 4, 6, 8, 10)</label>
+            <label class="game-info-dif" for="startGame">Choose between 2, 4, 6, 8 or 10 cards</label>
         </div>
         <div class="game-dif">
             <input class="game-info-dif" id="difficulty" type="number" min="2" max="10" step="2" value="4" name="difficulty" />
             <button class="game-info-dif" name="startGame" onclick="startGame();">Start Game</button>
         </div>
-        <div class="game-info-container">
-            <div class="game-info">
-                Time <span id="time-remaining">100</span>
-            </div>
-            <div class="game-info">
-                Flips <span id="flips">0</span>
-            </div>
-        </div>
-    
     <div id="gameContainer"></div>
     </div>
 </body>

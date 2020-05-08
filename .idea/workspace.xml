@@ -110,7 +110,7 @@
       <workItem from="1588840577495" duration="10000" />
       <workItem from="1588840960407" duration="1065000" />
       <workItem from="1588869199816" duration="4145000" />
-      <workItem from="1588877983459" duration="7505000" />
+      <workItem from="1588877983459" duration="13018000" />
     </task>
     <task id="LOCAL-00001" summary="Start over">
       <created>1588835353694</created>
@@ -155,26 +155,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="282" y="23" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1588835532260" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1588915207568">
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1588922432546">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1588838720944" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1588915207568" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1588915207567">
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1588922432546" />
+    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1588922432544">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1398" height="203" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1588838720939" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1588915207567" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1588915207567">
+    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1588922432544" />
+    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1588922432544">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1398" height="203" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1588838720938" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1588915207567" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1588915207568">
+    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1588922432544" />
+    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1588922432545">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1398" height="203" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1588838720940" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1588915207568" />
+    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1588922432545" />
     <state x="144" y="63" key="MergeDialog" timestamp="1588838657448">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -209,7 +209,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MemoryGameJavaScript$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1588839339044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/MemoryGameJavaScript$server.coverage" NAME="server Coverage Results" MODIFIED="1588915207551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/memory_game_generate_images - Copy" />
+    <SUITE FILE_PATH="coverage/MemoryGameJavaScript$server.coverage" NAME="server Coverage Results" MODIFIED="1588922290830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/memory_game_generate_images - Copy" />
     <SUITE FILE_PATH="coverage/MemoryGameJavaScript$MemoryGameJavaScript.coverage" NAME="MemoryGameJavaScript Coverage Results" MODIFIED="1588837247408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

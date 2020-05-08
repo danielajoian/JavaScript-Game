@@ -42,6 +42,54 @@ function ready() {
 
 function startGame() {
     let gameContainer = document.getElementById('gameContainer');
+        gameContainer.innerHTML = '';
+        let difficulty = parseInt(document.getElementById('difficulty').value);
+
+    if (allowed.indexOf(difficulty) !== -1) {
+        let brandsCopy = JSON.parse(JSON.stringify(brands)); // to create a copy of the brands array
+        let pickedBrands = [];
+        for (let i = (difficulty * difficulty) / 2; i > 0; i--) {
+            let randomBrand = brandsCopy.splice(Math.floor(Math.random() * brandsCopy.length), 1); // when we use SPLICE, the element picked is removed from the array
+            pickedBrands.push(randomBrand);
+            pickedBrands.push(randomBrand);
+        }
+
+        // creating rows and columns for the game board
+        for (let i = 0; i < difficulty; i++) {
+            let row = document.createElement('div');
+            for (let j = 0; j < difficulty; j++) {
+                // <i class="fab fa-instagram"></i>  - creating elements for the font icons
+                let brand = document.createElement('i');
+                brand.classList.add('fab');
+                brand.classList.add('fa-' + pickedBrands.splice(Math.floor(Math.random() * pickedBrands.length), 1));
+                row.append(brand);
+                brand.addEventListener('click', function(event) {
+                    let revealed = document.querySelectorAll('.reveal');
+                    if (revealed.length == 2) {
+                        if (revealed[0].getAttribute('class') == revealed[1].getAttribute('class')) {
+                            revealed[0].classList.add('matched');
+                            revealed[1].classList.add('matched');
+                        }
+                        revealed[0].classList.remove('reveal');
+                        revealed[1].classList.remove('reveal');
+                    }
+                    event.currentTarget.classList.add('reveal');
+                });
+            }
+            gameContainer.append(row);
+        }
+    } else {
+        alert('Invalid value found on difficulty!');
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready());
+} else {
+    ready();
+}
+function startGame4() {
+    let gameContainer = document.getElementById('gameContainer');
     gameContainer.innerHTML = '';
     let difficulty = parseInt(document.getElementById('difficulty').value);
 
